@@ -23,6 +23,12 @@ h1 {
   margin: 0px;
 }
 
+#current-city::before {
+  content: "📍 ";
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .search-input {
   background-color: #f9f7fe;
   border: none;
