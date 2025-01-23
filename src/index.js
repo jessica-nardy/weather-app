@@ -7,12 +7,14 @@ function refreshWeather(response) {
   let humidity = response.data.temperature.humidity;
   let windElement = document.querySelector("#wind-speed");
   let wind = response.data.wind.speed;
+  let iconElement = document.querySelector("#icon");
 
   temperatureElement.innerHTML = Math.round(temperature);
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${humidity}%`;
   windElement.innerHTML = `${wind}km/h`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="app-icon" />`;
 }
 
 function searchCity(city) {
