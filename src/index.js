@@ -18,6 +18,8 @@ function refreshWeather(response) {
   windElement.innerHTML = `${wind}km/h`;
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="app-icon" />`;
   timeElement.innerHTML = formatDate(date);
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -48,7 +50,15 @@ function searchCity(city) {
   axios.get(apiUrl).then(refreshWeather);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "8t7b43fadd5ba0704f357ba3a35e30o0";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let forecastHtml = "";
 
@@ -80,4 +90,3 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSearch);
 
 searchCity("Porto");
-displayForecast();
