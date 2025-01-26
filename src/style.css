@@ -1,15 +1,19 @@
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #f9f7fe;
+
+  background-color: rgb(245, 239, 239);
 }
 
 .weather-app {
-  background: white;
+  background-image: url("cloud4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   max-width: 600px;
   margin: 35px auto;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 16px;
   padding: 30px;
+  background-position: 0% 100%;
 }
 
 header {
@@ -59,7 +63,7 @@ h1 {
 
 .weather-details {
   font-size: 16px;
-  color: rgba(39, 33, 66, 0.4);
+  color: rgb(2, 2, 2);
   line-height: 24px;
   font-weight: 500;
 }
@@ -87,13 +91,23 @@ h1 {
 
 .weather-forecast {
   display: flex;
-  justify-content: space-around;
-  margin: 30px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-forecast-day {
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+}
+
+.weather-forecast-day:hover {
+  background-color: rgba(243, 230, 230, 0.6);
 }
 
 .weather-forecast-date {
   text-align: center;
-  color: rgba(39, 33, 66, 0.4);
+  color: rgb(2, 2, 2);
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 10px;
@@ -108,7 +122,7 @@ h1 {
 .weather-forecast-temperatures {
   display: flex;
   text-align: center;
-  color: #f65282;
+  color: #bf315b;
   justify-content: center;
   margin-top: 10px;
 }
