@@ -100,8 +100,9 @@ h1 {
 }
 
 .weather-forecast-icon {
-  font-size: 35px;
-  text-align: center;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
 }
 
 .weather-forecast-temperatures {
