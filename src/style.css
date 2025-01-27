@@ -63,9 +63,16 @@ h1 {
 
 .weather-details {
   font-size: 16px;
+  padding: 20px;
   color: rgb(2, 2, 2);
   line-height: 24px;
   font-weight: 500;
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+}
+
+.weather-details:hover {
+  background-color: rgba(243, 230, 230, 0.6);
 }
 
 .weather-details strong {
